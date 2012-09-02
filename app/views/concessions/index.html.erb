@@ -1,0 +1,125 @@
+
+<div id="container980">
+	
+	<div id="feature">
+					
+			<h2>Procurement Data</h2>
+			<p>A summary of the procurement status from each of the concessions. Select 'choose' to drill down to agency level data.</p>
+		
+
+		<!--<div class="right">
+			<h2>Feature #2</h2>
+			<p>Use div class="left" and "right" for two columns, or remove the two extra div:s to use a single column here.</p>
+		</div>-->
+		<div class="clear">&nbsp;</div>
+	</div>
+
+<div id="main">
+<div id="content">
+<table >
+  <thead>
+    <th  class="side" ></th>
+    <% @data.each do |t| %>
+  	<th class= "<%=t['td_class']%>">
+    <%= t['name']%></td>
+    </th>
+    <% end %>
+    
+  </thead>
+<tfoot>
+	
+		<tr>
+			<td class="side">&nbsp;</td>
+			<% @data.each do |t| %>
+			<% if t['name'] != 'Total'%>
+  			<td class= "<%=t['td_class']%>"><a href="signUpChoiceA.html" onclick="activateThisColumn('choiceA');return false;"><%= image_tag("choose.gif") %></a></td>
+  			<% else%>
+  			<td class= "<%=t['td_class']%>"></td>
+  			<%end%>
+			<%end%>
+		</tr>
+	</tfoot>
+	<tbody>
+		<tr>
+			<td class="side">Seed Cotton Estimated (tonnes)</td>
+   			<% @data.each do |t| %>
+   			<td class= "<%=t['td_class']%>"><%= t['quantity_planned'] %></td>
+   			<%end%>
+   		</tr>
+   		<tr>
+			<td class="side">Seed Cotton Procured (tonnes)</td>
+   			<% @data.each do |t| %>
+   			<td class= "<%=t['td_class']%>"><%= t['quantity_procured'] %></td>
+   			<%end%>
+   		</tr>
+   		<tr>
+			<td class="side">Cash Outstanding</td>
+   			<% @data.each do |t| %>
+   			<td class= "<%=t['td_class']%>"><%= t['cash_balance']%> MZM</td>
+   			<%end%>
+   		</tr>
+   		<tr>
+			<td class="side">Transit Weight Loss(tonnes)</td>
+   			<% @data.each do |t| %>
+   			<td class= "<%=t['td_class']%>"><%= t['weight_loss'] %></td>
+   			<%end%>
+   		</tr>
+   		<!--<tr>
+			<td class="side">Agri Input Delivered</td>
+   			<% @data.each do |t| %>
+   			<td class= "<%=t['td_class']%>"><%= t['input_delivered'] %> MZM</td>
+   			<%end%>
+   		</tr>
+   		<tr>
+			<td class="side">Agri Input Recovered</td>
+   			<% @data.each do |t| %>
+   			<td class= "<%=t['td_class']%>"><%= t['input_recovered'] %> MZM</td>
+   			<%end%>
+   		</tr>-->
+   		<tr>
+			<td class="side">Recovery Percentage</td>
+   			<% @data.each do |t| %>
+   			<td class= "<%=t['td_class']%>"><%= t['input_recovered']/t['input_recovered']*100 %> % </td>
+   			<%end%>
+   		</tr>
+   		<tr>
+			<td class="side">Jute Bags Oustanding</td>
+   			<% @data.each do |t| %>
+   			<td class= "<%=t['td_class']%>"><%= t['jute_bags_given'] - t['bags_received']%> </td>
+   			<%end%>
+   		</tr>
+   		<!--<tr>
+			<td class="side">Jute Bags Received</td>
+   			<% @data.each do |t| %>
+   			<td class= "<%=t['td_class']%>"><%= t['bags_received']%> </td>
+   			<%end%>
+   		</tr>
+   		<tr>
+			<td class="side">Empty Jute Bags Received</td>
+   			<% @data.each do |t| %>
+   			<td class= "<%=t['td_class']%>"><%= t['bags_received_empty']%> </td>
+   			<%end%>
+   		</tr>
+   		<tr>
+			<td class="side">Transportation Expense</td>
+   			<% @data.each do |t| %>
+   			<td class= "<%=t['td_class']%>"><%= t['bags_received_empty']%>  </td>
+   			<%end%>
+   		</tr>-->
+   		
+                      
+                                      <!--
+             
+                                            'bags_received_empty'=>Concession.sum("bags_received_empty"),
+                      'transport_expense'=>Concession.sum("transport_expense")}-->
+	 
+
+</tbody>
+</table>
+
+<br />
+
+
+</div>
+</div>
+</div>

@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  concession_id: 1
+  quantity_planned: 1
+  quantity_procured: 1
+  weight_loss: 1
+  input_delivered: 1
+  input_recovered: 1
+  input_non_recovery: 1
+  jute_bags_given: 1
+  bags_received: 1
+  bags_received_empty: 1
+  transport_expense: 1
+
+two:
+  name: MyString
+  concession_id: 1
+  quantity_planned: 1
+  quantity_procured: 1
+  weight_loss: 1
+  input_delivered: 1
+  input_recovered: 1
+  input_non_recovery: 1
+  jute_bags_given: 1
+  bags_received: 1
+  bags_received_empty: 1
+  transport_expense: 1

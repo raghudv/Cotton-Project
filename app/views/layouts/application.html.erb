@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+ 
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+   <title>Olam Mozambique Cotton</title>
+</head>
+<body>
+	<div id="container980"><!-- Use"containerfull" for 100% width. For fixed width, use "container980", "container760" or "container600" (the number is the layout width in pixels). -->
+	<div id="header">
+		<h1><a href="index.html">Olam Mozambique Cotton</a></h1>
+		<h2>Ribaue|Tete|Morrumbula</h2>
+	</div>
+	<div id="menu"> 
+		<ul>     
+			<li><a class="current" href="index.html">Procurement Data</a></li>
+			<li><a href="760px.html">Projections</a></li>
+			<li><a href="600px.html">Graphs</a></li>
+			<li><a href="full.html">About us</a></li>
+		</ul>
+	</div>
+	
+	
+	
+		<%= yield %>
+
+	
+<div id="footer">
+		<div id="footersections">
+			<div class="half">
+				<h2>Olam International</h2>
+				<p>Olam International Limited is a leading global integrated supply chain manager and processor of agricultural products and food ingredients, sourcing 20 products with a direct presence in 65 countries and supplying them to over 11,000 customers.</p>
+			</div>
+
+			<div class="quarter">
+				<h2>Log Out</h2>
+				<p>You are logged in as username</username></p>
+				<p><a href="#">Log out</a></p>
+			</div>
+
+			<div class="lastquarter">
+				<h2>Contact us</h2>
+				<ul>
+					<li><a href="http://olamonline.com/">Olam International Limited</a></li>
+					
+				</ul>	
+			</div>     
+			<div class="clear">&nbsp;</div> 
+		</div>
+	</div>   
+
+	<div id="credits">
+		<p>&copy; Raghu<br />
+		<span class="small">Template design by <a href="http://andreasviklund.com/">Andreas Viklund</a></span></p>
+	</div>  
+
+
+</body>
+</html>

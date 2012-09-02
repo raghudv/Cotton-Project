@@ -1,0 +1,65 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @agency.name %>
+</p>
+
+<p>
+  <b>Concession:</b>
+  <%= @agency.concession_id %>
+</p>
+
+<p>
+  <b>Quantity planned:</b>
+  <%= @agency.quantity_planned %>
+</p>
+
+<p>
+  <b>Quantity procured:</b>
+  <%= @agency.quantity_procured %>
+</p>
+
+<p>
+  <b>Weight loss:</b>
+  <%= @agency.weight_loss %>
+</p>
+
+<p>
+  <b>Input delivered:</b>
+  <%= @agency.input_delivered %>
+</p>
+
+<p>
+  <b>Input recovered:</b>
+  <%= @agency.input_recovered %>
+</p>
+
+<p>
+  <b>Input non recovery:</b>
+  <%= @agency.input_non_recovery %>
+</p>
+
+<p>
+  <b>Jute bags given:</b>
+  <%= @agency.jute_bags_given %>
+</p>
+
+<p>
+  <b>Bags received:</b>
+  <%= @agency.bags_received %>
+</p>
+
+<p>
+  <b>Bags received empty:</b>
+  <%= @agency.bags_received_empty %>
+</p>
+
+<p>
+  <b>Transport expense:</b>
+  <%= @agency.transport_expense %>
+</p>
+
+
+<%= link_to 'Edit', edit_agency_path(@agency) %> |
+<%= link_to 'Back', agencies_path %>

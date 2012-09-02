@@ -1,0 +1,45 @@
+<h1>Listing agencies</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Concession</th>
+    <th>Quantity planned</th>
+    <th>Quantity procured</th>
+    <th>Weight loss</th>
+    <th>Input delivered</th>
+    <th>Input recovered</th>
+    <th>Input non recovery</th>
+    <th>Jute bags given</th>
+    <th>Bags received</th>
+    <th>Bags received empty</th>
+    <th>Transport expense</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @agencies.each do |agency| %>
+  <tr>
+    <td><%= agency.name %></td>
+    <td><%= agency.concession_id %></td>
+    <td><%= agency.quantity_planned %></td>
+    <td><%= agency.quantity_procured %></td>
+    <td><%= agency.weight_loss %></td>
+    <td><%= agency.input_delivered %></td>
+    <td><%= agency.input_recovered %></td>
+    <td><%= agency.input_non_recovery %></td>
+    <td><%= agency.jute_bags_given %></td>
+    <td><%= agency.bags_received %></td>
+    <td><%= agency.bags_received_empty %></td>
+    <td><%= agency.transport_expense %></td>
+    <td><%= link_to 'Show', agency %></td>
+    <td><%= link_to 'Edit', edit_agency_path(agency) %></td>
+    <td><%= link_to 'Destroy', agency, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Agency', new_agency_path %>

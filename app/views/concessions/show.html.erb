@@ -1,0 +1,65 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @concession.name %>
+</p>
+
+<p>
+  <b>Concession:</b>
+  <%= @concession.concession_id %>
+</p>
+
+<p>
+  <b>Quantity planned:</b>
+  <%= @concession.quantity_planned %>
+</p>
+
+<p>
+  <b>Quantity procured:</b>
+  <%= @concession.quantity_procured %>
+</p>
+
+<p>
+  <b>Weight loss:</b>
+  <%= @concession.weight_loss %>
+</p>
+
+<p>
+  <b>Input delivered:</b>
+  <%= @concession.input_delivered %>
+</p>
+
+<p>
+  <b>Input recovered:</b>
+  <%= @concession.input_recovered %>
+</p>
+
+<p>
+  <b>Input non recovery:</b>
+  <%= @concession.input_non_recovery %>
+</p>
+
+<p>
+  <b>Jute bags given:</b>
+  <%= @concession.jute_bags_given %>
+</p>
+
+<p>
+  <b>Bags received:</b>
+  <%= @concession.bags_received %>
+</p>
+
+<p>
+  <b>Bags received empty:</b>
+  <%= @concession.bags_received_empty %>
+</p>
+
+<p>
+  <b>Transport expense:</b>
+  <%= @concession.transport_expense %>
+</p>
+
+
+<%= link_to 'Edit', edit_concession_path(@concession) %> |
+<%= link_to 'Back', concessions_path %>
